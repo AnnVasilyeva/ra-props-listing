@@ -15,7 +15,7 @@ export default function Item ({url, MainImage, title, currency_code, price, quan
                 </a>
             </div>
             <div className="item-details">
-                <p className="item-title">{title}</p>
+                <p className="item-title">{title.length > 50 ? title.slice(0, 51) + '...' : title}</p>
                 <Price currency_code={currency_code} price={price}/>
                 <Quantity quantity={quantity}/>
             </div>
